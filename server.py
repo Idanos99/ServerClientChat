@@ -40,12 +40,11 @@ def handle_client(client_socket, client_address):
 
 # Function to broadcast messages to all connected clients
 def broadcast_message(message):
+    t = datetime.datetime.now()
+    t = t.strftime('%H:%M:%S')
+    print(t + " - " + message)
     for client_name, client_socket in clients.items():
         try:
-            t = datetime.datetime.now()
-            t = t.strftime('%H:%M:%S')
-            print(t + " - " + message)
-
             client_socket.send(message.encode('utf-8'))
         except Exception as e:
             print(f"Error sending message to {client_name}: {e}")
