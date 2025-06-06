@@ -56,14 +56,13 @@ Enter your name:
 ```
 
 ## Usage
----
+
 * Once connected, simply **type your message** in the client terminal and press **Enter** to send it.
 * All messages, including your own, will appear with a **timestamp and the sender's name**.
 * When a new user joins, all connected clients will see a notification like: `[HH:MM:SS] - [ClientName] has joined the chat.`
 * When a user leaves, all connected clients will see a notification like: `[HH:MM:SS] - [ClientName] has left the chat.`
 
 ## Code Overview
----
 
 ### `server.py`
 
@@ -99,29 +98,23 @@ The client-side application is responsible for:
 * `start_client()`: Initializes the client socket, connects to the server, and starts the sending and receiving threads.
 
 ## Troubleshooting
----
+
 * **"Connection refused" error**: Ensure the `server.py` is running before you try to connect clients. Also, make sure the `PORT` in both `server.py` and `client.py` is the same (default is 1234).
 * **Messages not appearing**: Check your firewall settings to ensure that connections on port 1234 are allowed.
 
----
-
 ## Future Enhancements
----
+
 * **Private Messaging**: Allow users to send direct messages to specific individuals.
 * **Error Handling**: More robust error handling for network issues or unexpected client disconnections.
 * **Chat Commands**: Add special commands (e.g., `/quit`, `/help`).
 * **Message History**: Store and display a limited chat history.
 
----
 
 ## Contributing
----
+
 Feel free to fork the repository and contribute to this project. Any improvements or new features are welcome!
 
----
-
 ## License
----
+
 This project is open source and available under the MIT License.
 
----
